@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/776b8e06f9.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Frontend Mentor | E-commerce product page</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!--Navbar-->
+    <nav class="navbar">
+      <div class="navigations">
+        <img src="/images/logo.svg" alt="Logo Sneakers Icon" />
+        <div class="links">
+          <a href="#">Collections</a>
+          <a href="#">Men</a>
+          <a href="#">Womem</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+
+      <div class="icons">
+        <a href="#" id="cart-btn">
+          <img
+            src="/images/icon-cart.svg"
+            alt="Cart icon for the shop list page"
+            role="link"
+          />
+        </a>
+        <a href="#" class="avatar">
+          <img src="/images/image-avatar.png" alt="Avatar Image" role="link" />
+        </a>
+      </div>
+    </nav>
+
+    <!--For the pop-up when the cart is clicked or get focus-->
+    <div class="cart-list">
+      <div>
+        <small>Cart</small>
+      </div>
+      <p>Your cart is empty.</p>
+    </div>
+
+    <!--When the product is added to the cart-->
+    <div class="cart-list-added">
+      <div>
+        <small>Cart</small>
+      </div>
+      <div class="product">
+        <img src="/images/image-product-1-thumbnail.jpg" alt="Image product" />
+
+        <div class="product-info">
+          <p class="name">Fall Limited Edition Sneakers</p>
+          <div class="price-info">
+            <p class="default-price">%125.00 x</p>
+            <p id="default-amount"></p>
+            <p id="total"></p>
+          </div>
+        </div>
+
+        <img
+          id="delete"
+          src="/images/icon-delete.svg"
+          alt="Delete product of the cart list"
+        />
+      </div>
+
+      <button class="checkout-btn">Checkout</button>
+
+      <!--for the ballon after add the product-->
+      <p id="products-added"></p>
+    </div>
+
+    <!--Main Component-->
+    <main class="main-container">
+      <!--The product images-->
+      <div class="products-images">
+        <img
+          src="/images/image-product-1.jpg"
+          alt="Product 1 Thumbnail"
+          class="thumbnail"
+        />
+        <div class="thumbnails">
+          <div class="image-active">
+            <img
+              src="/images/image-product-1-thumbnail.jpg"
+              alt="product 1 thumbnail"
+              class="thumbnail"
+            />
+          </div>
+          <div class="image">
+            <img
+              src="/images/image-product-2-thumbnail.jpg"
+              alt="product 2 thumbnail"
+              class="thumbnail"
+            />
+          </div>
+          <div class="image">
+            <img
+              src="/images/image-product-3-thumbnail.jpg"
+              alt="product 3 thumbnail"
+              class="thumbnail"
+            />
+          </div>
+          <div class="image">
+            <img
+              src="/images/image-product-4-thumbnail.jpg"
+              alt="product 4 thumbinal"
+              class="thumbnail"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!--Product offer-->
+      <div class="product-offer">
+        <h2 class="subtitle">Sneaker Company</h2>
+        <h1 class="title">Fall Limited Edition Sneakers</h1>
+        <p class="paragraph">
+          These low-profile sneakers are your perfect casual wear companion.
+          Featuring a durable rubber outer sole, they’ll withstand everything
+          the weather can offer.
+        </p>
+
+        <div class="price-offer">
+          <p class="price">$125.00</p>
+          <p class="discount">50%</p>
+        </div>
+
+        <del>$250.00</del>
+
+        <div class="add-product">
+          <div class="amount-products">
+            <button id="minus-btn">
+              <img src="/images/icon-minus.svg" alt="plus button icon" />
+            </button>
+            <p class="amount">0</p>
+            <button id="plus-btn">
+              <img src="/images/icon-plus.svg" alt="plus button icon" />
+            </button>
+          </div>
+
+          <button id="add-to-cart">
+            <i class="fa-solid fa-cart-shopping"></i>
+            Add to cart
+          </button>
+        </div>
+
+        <p class="error">
+          Product amount can't be zero, please add on your cart at least one.
+        </p>
+      </div>
+    </main>
+
+    <!--Lightbox-->
+    <main role="presentation" class="lightbox remove">
+      <!--Made with Js-->
+    </main>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://www.frontendmentor.io/profile/maria202costa"
+        >@maria202costa</a
+      >.
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
