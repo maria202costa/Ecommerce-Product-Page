@@ -12,8 +12,9 @@ const totalAmount = document.getElementById("default-amount");
 const totalPrice = document.getElementById("total");
 const newBalloon = document.getElementById("products-added");
 
-const defaultThumbnail = document.querySelectorAll(".thumbnail");
 const lightBox = document.querySelector(".lightbox");
+const defaultThumbnail = document.querySelectorAll(".thumbnail");
+const changeMainImage = document.getElementById("changeMainImage");
 
 const minorImages = [
   "/images/image-product-1-thumbnail.jpg",
@@ -144,7 +145,6 @@ fetch("/images.json")
       divImage.innerHTML = `<img src=${imgs} alt="product images">`;
 
       thumbnailsDiv.appendChild(divImage);
-      console.log(divImage);
     });
 
     mainDiv.appendChild(close);
@@ -198,4 +198,17 @@ fetch("/images.json")
         changeDiv.appendChild(thumb1);
       }
     });
+
+    setTimeout(function () {
+      changeMainImage.src = "/images/image-product-2.jpg";
+    }, 5000);
+    setTimeout(function () {
+      changeMainImage.src = "/images/image-product-3.jpg";
+    }, 10000);
+    setTimeout(function () {
+      changeMainImage.src = "/images/image-product-4.jpg";
+    }, 15000);
+    setTimeout(function () {
+      changeMainImage.src = "/images/image-product-1.jpg";
+    }, 20000);
   });

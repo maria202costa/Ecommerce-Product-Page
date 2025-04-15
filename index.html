@@ -98,6 +98,29 @@
       <p id="products-added"></p>
     </div>
 
+    <!--Mobile Navbar-->
+    <nav class="mobile-nav">
+      <div class="logo-menu">
+        <button class="menu-btn">
+          <img src="/images/icon-menu.svg" alt="Open menu button" />
+        </button>
+        <img src="/images/logo.svg" alt="Sneakers logo" />
+      </div>
+
+      <div class="icons">
+        <a href="#" id="cart-btn-mobile">
+          <img
+            src="/images/icon-cart.svg"
+            alt="Cart icon for the shop list page"
+            role="link"
+          />
+        </a>
+        <a href="#" class="avatar">
+          <img src="/images/image-avatar.png" alt="Avatar Image" role="link" />
+        </a>
+      </div>
+    </nav>
+
     <!--Main Component-->
     <main class="main-container">
       <!--The product images-->
@@ -106,6 +129,7 @@
           src="/images/image-product-1.jpg"
           alt="Product 1 Thumbnail"
           class="thumbnail"
+          id="changeMainImage"
         />
         <div class="thumbnails">
           <div class="image-active">
@@ -139,6 +163,57 @@
         </div>
       </div>
 
+      <!--Product offer-->
+      <div class="product-offer">
+        <h2 class="subtitle">Sneaker Company</h2>
+        <h1 class="title">Fall Limited Edition Sneakers</h1>
+        <p class="paragraph">
+          These low-profile sneakers are your perfect casual wear companion.
+          Featuring a durable rubber outer sole, they’ll withstand everything
+          the weather can offer.
+        </p>
+
+        <div class="price-offer">
+          <p class="price">$125.00</p>
+          <p class="discount">50%</p>
+        </div>
+
+        <del>$250.00</del>
+
+        <div class="add-product">
+          <div class="amount-products">
+            <button id="minus-btn">
+              <img src="/images/icon-minus.svg" alt="plus button icon" />
+            </button>
+            <p class="amount">0</p>
+            <button id="plus-btn">
+              <img src="/images/icon-plus.svg" alt="plus button icon" />
+            </button>
+          </div>
+
+          <button id="add-to-cart">
+            <i class="fa-solid fa-cart-shopping"></i>
+            Add to cart
+          </button>
+        </div>
+
+        <p class="error">
+          Product amount can't be zero, please add on your cart at least one.
+        </p>
+      </div>
+    </main>
+
+    <main class="main-container-mobile">
+      <!--The product images-->
+      <div class="lightbox-mobile">
+        <button class="previous">
+          <img src="/images/icon-previous.svg" alt="previous button" />
+        </button>
+        <img src="/images/image-product-1.jpg" alt="product image 1" />
+        <button class="next">
+          <img src="/images/icon-next.svg" alt="next button" />
+        </button>
+      </div>
       <!--Product offer-->
       <div class="product-offer">
         <h2 class="subtitle">Sneaker Company</h2>
